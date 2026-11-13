@@ -1,79 +1,403 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="PRAC.css">
-</head>
-<body>
-    <nav>
-        <div class="nav-wrap">
-            <a class="logo" href="#">
-                <span class="logo-crown">👑</span>
-                <span class="logo-text"><b>EZED</b> <span>MARKETING MALIEARN</span></span>
-            </a>
-            <div class="nav-links" id="navLinks">
-                <a href="#" class="active">🏠 Home</a>
-                <a href="#about">About</a>
-                <a href="#hiw">How it works</a>
-                <a href="#">Contact</a>
-                </div>
-                <div class="nav-btns">
-                    <a href="#" class="btn btn-outline">&#128100;Login</a>
-                    <a href="#" class="btn btn-gold">&#128640; Register</a>
-                    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
-                </div>
-        </div>
-    </nav>
-    <section class="hero">
-        <div>
-            <span class="bagde">&#128161;Join &bull; Refer &bull; Earn</span>
-            <h1>EZED MARKETING <span>MALIEARN</span></h1>
-            <p class="lead"><b>The Trusted Affiliate Marketing Platform that <span style="color:#ffc700"> Rewards</span> Your Effort!</b><br><br>Join today, refer friends, and earn amazing rewards with EZED MARKETING MALIEARN</p>
-            <div class="hero-btns">
-                <a href="#" class="btn btn-gold">&#128100+Register Now &rarr;</a>
-                <a href="#" class="btn btn-outline">&#9654; Watch Now</a>
-            </div>
-        </div>
-        <div class="hero-img">
-            <div class="float-card f1">
-                Your Success <small>Our Priority!</small>
-            </div>
-            <img class="person" src="photo.jpg" alt="Ezed photo">
-            <div class="float-card f2">&bigstar; Trusted by Thousands</div>
-        </div>
-    </section>
-    <div class="trust" id="about">
-        <div class="trust-grid">
-            <div class="trust-item"><i>🛡️</i><div><b>Secure & Trusted</b> <span>Your Data is Safe</span></div></div>
-            <div class="trust-item"><i>⚡</i><div><b>Instant Rewards</b><span>Get Paid Fast</span></div></div>
-            <div class="trust-item"><i>👥</i><div><b>Referral Bonus</b><span>Earn KES 100 per Referral</span></div></div>
-            <div class="trust-item"><i>🎧</i><div><b>24/7 Support</b><span>We're Always Here</span></div></div>
-            <div class="trust-item"><i>🎁</i><div><b>Community Benefits</b><span>Be Part of Something Big</span></div></div>
-        </div>
-    </div>
-    <div class="trust">
-        <div class="stats">
-            <div class="stat"><span style="font-size: 28px;">👥</span><div><b>50K</b> <span>Active Members</span></div></div>
-            <div class="stat"><span style="font-size: 28px;">🏆</span><div><b>KES 5M+</b> <span>Total Rewards Paid</span></div></div>
-            <div class="stat"><span style="font-size: 28px;">📊</span><div><b>100%</b> <span>Trusted Platform</span></div></div>
-            <div class="stat-cta"><b>Grow Your Network, Grow Your Income!</b><p>Strat Earning Today! Join EZED MARKETINGMALIEARN NOW</p></div>
-        </div>
-    </div>
-    <section class="section" id="hiw">
-        <h2>How It Works</h2>
-        <div class="how">
-            <div class="step"><div class="num">1</div><div><b>Register</b><span>Create your free account in minutes</span></div></div>
-            <div class="step"><div class="num">2</div><div><b>Refer Friends</b><span>Invite others to join and pay registration fee.</span></div></div>
-            <div class="cta-box"><b>Start Earning Today!</b><p style="font-size: 13px;">Join EZED MARKETING MALIEARN Now</p><br><a href="#" class="btn" style="background-color: #000; color:#fff">RegisterNow</a></div>
-        </div>
-    </section>
-    <footer>
-        <div class="foot">
-            <div>🛡️<b>100% Secure Payments Via M-Pesa</b> | 🤝 Fair & Transparent System  | ⭐ Trusted by Thousands</div>
-            <div><b style="color: #4caf50;">M-PESA</b> &#127472;&#127466; Kenya</div>
-        </div>
-    </footer>
-</body>
-</html>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --navy:#050a1e;--navy2:#0a1230;--gold:#ffc700;--gold2:#ff9d00;--white:#fff;--muted:#cbd5e1;
+}
+body{
+    font-family:Arial, sans-serif;
+    background:var(--navy);
+    color:var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(5,10,30,.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 199,0,.2);
+}
+.nav-wrap{
+    max-width: 1200px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-weight: 900;
+}
+.logo-crown{
+    font-size: 38px;
+    line-height: 1;
+}
+.logo-text{
+    line-height: 1;
+}
+.logo-text b{
+    font-size: 26px;
+    letter-spacing: 1px;
+    background: linear-gradient(180deg, #fff, #c0c8d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+.logo-text span{
+    font-size: 11px;
+    letter-spacing: 1px;
+    color:var(--gold);
+    display: block;
+}
+.nav-links{
+    display: flex;
+    gap:22px;
+    align-items:center;
+    font-size: 14px;
+}
+.nav-links a{
+    opacity: .85;
+
+}
+.nav-links a.active{
+    background:var(--gold);
+    color: #000;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    opacity: 1;
+}
+.nav-btns{
+    display: flex;
+    gap:10px
+}
+.btn{
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: 700px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap:8px;
+    justify-content: center;
+    border:1px solid var(--gold);
+
+}
+.btn-gold{
+    background: linear-gradient(180deg, #ffd700,#ff9d00);
+    color: #000;
+    border:none;
+}
+.btn-outline{
+    background: transparent;
+    color:#fff;
+}
+.hamburger{
+    display: none;
+    font-size: 220px;
+    cursor: pointer;
+    background:none;
+    border: none;
+    color:#fff
+}
+.hero{
+    max-width: 1200px;
+    margin: auto; padding: 40px 20px 20px;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 30px;
+    align-items: center;
+}
+.bagde{
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+.hero h1{
+    font-size: clamp( 32px, 5vw, 58px);
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+.hero h1 span{
+    color: var(--gold);
+    display: block;
+}
+.hero p.lead{
+    color: var(--muted);
+    margin:16px 0px;
+    font-size: 16px;
+    max-width: 520px;
+}
+.hero p.lead b{
+    color: #fff;
+}
+.hero-btns{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+.hero-img{
+    position: relative;
+    text-align: center;
+}
+.hero-img.person{
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+    border-radius: 20px;
+    aspect-ratio: 4/4.2;
+    object-fit: cover;
+    background: #16204a;
+}
+.float-card{
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+.float-card small{
+    display: block;
+    color: #666;
+    font-weight: 400;
+}
+.f1{
+    left:0;
+    top:20px
+}
+.f2{
+    right:0;
+    bottom: 20px;
+}
+.trust{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.trust-grid{
+    background-color: #0a1230;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding: 18px;
+}
+.trust-item{
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 0 12px;
+}
+.trust-item+ .trust-item{
+    border-left: 1px solid rgba(255, 255, 255, .);
+}
+.trust-item i{
+    font-size: 20px;
+}
+.trust-item b{
+    font-size:13px;
+    display: block;
+}
+.trust-item span{
+    font-size: 12px;
+    color: var(--muted);
+}
+.stats{
+    max-width: 1200px;
+    margin: 16px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.2fr;
+    gap:0;
+    background: linear-gradient(90deg,#0a1a5a,#0a1230);
+    border-radius: 16px;
+    overflow: hidden;
+}
+.stat{
+    padding: 18px;
+    display: flex;
+    gap:12px;
+    align-items: center;
+}
+.stat b{
+    font-size: 22px;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+}
+.stat span{
+    font-size: 12px;
+    color: var(--muted);
+}
+.stat-cta{
+    background:var(--gold);
+    color: #000;
+    padding: 18px;
+}
+.stat-cta b{
+    color: #000;
+    font-size: 18px;
+}
+.stat-cta p{
+    font-size: 12px;
+}
+.section{
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+.section h2{
+    text-align: center;
+    color: var(--gold);
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+.how{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    gap: 20px;
+    align-items: start;
+}
+.step{
+    display: flex;
+    gap: 12px;
+}
+.num{
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background: var(--gold);
+    color: #000;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+}
+.step b{
+    display: block;
+}
+.step span{
+    font-size: 13px;
+    color: var(--muted);
+}
+.cta-box{
+    background: var(--gold);
+    color: #000;
+    border-radius: 16px;
+    padding: 20px;
+}
+footer{
+    border-top:1px solid rgba(255, 255, 255,.1);
+    padding: 18px 20px;
+}
+.foot{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap:16px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--muted);
+}
+.foot b{
+    color: #fff;
+}
+@media(max-width:900px){
+    .nav-links{display: none;}
+    .nav-links.open{
+        display: flex;
+        position: absolute;
+        top: 64px;
+        left:0;
+        right: 0;
+        background-color: #050a1e;
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;border-bottom: 1px solid #222;
+    }
+    .hamburger{
+        display: block;
+    }
+    .nav-btns .btn-outline{
+        display: none;
+    }
+    .hero{
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 20px;
+}
+.hero p.lead{
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero-btns{
+    justify-content: center;
+}
+.hero-img{
+    order: -1;
+}
+.hero-img .hero-img.person{
+    max-width: 320px;
+}
+.float-card{
+    position:static;
+    display: inline-block;
+    margin: 8px 4px;
+}
+.trust-grid{
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.trust-item+ .trust-item{
+    border-left:none ;
+
+}
+.stats{
+    grid-template-columns: 1fr 1fr;
+}
+.how{
+    grid-template-columns: 1fr;
+}
+.logo-text b{
+    font-size: 20px;
+}
+}
+@media(max-width:480px){
+    .trust-grid{
+        grid-template-columns: 1fr;
+    }
+    .stats{
+        grid-template-columns: 1fr;
+    }
+    .hero h1{
+        font-size: 30px;
+    }
+    .hero-btns{
+        flex-direction: column;
+    }
+}
