@@ -3,115 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maliearn</title>
-    <link rel="stylesheet" href="mali.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="PRAC.css">
 </head>
 <body>
-    <nav class="nav-bar">
-        <div>
-            <img src="logo.png" width="200px">
+    <nav>
+        <div class="nav-wrap">
+            <a class="logo" href="#">
+                <span class="logo-crown">👑</span>
+                <span class="logo-text"><b>EZED</b> <span>MARKETING MALIEARN</span></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#" class="active">🏠 Home</a>
+                <a href="#about">About</a>
+                <a href="#hiw">How it works</a>
+                <a href="#">Contact</a>
+                </div>
+                <div class="nav-btns">
+                    <a href="#" class="btn btn-outline">&#128100;Login</a>
+                    <a href="#" class="btn btn-gold">&#128640; Register</a>
+                    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+                </div>
         </div>
-        <div class="links">
-            <a href="#home" ><img src=   "home.jpg" width="25px">Home</a>
-            <a href="#about">About</a>
-            <a href="#how it works">How It Works</a>
-            <a href="#contact">Contact</a>
-        </div>
-            <div class="nav-btn">
-                <button class="log-btn">&#128100; Login</button>
-                <button class="reg-btn">&#128640; Register</button>
-            </div>
     </nav>
-    <div class="bdy">
+    <section class="hero">
         <div>
-            <h1>EZED MARKETING <br><span>MALIEARN</span></h1>
-            <h3>
-                The Trusted Affiliate Marketing Platform that <span>Rewards</span> your Effort
-            </h3>
-            <p>
-                Join today, refer friends, and earn amazing rewards with EZED MARKETING <span>MALIEARN</span>
-            </p>
-            <button class="r-btn">&#128100; Register Now &gt;</button> <button class="v-btn">&#9654;Watch Video</button>
-
+            <span class="bagde">&#128161;Join &bull; Refer &bull; Earn</span>
+            <h1>EZED MARKETING <span>MALIEARN</span></h1>
+            <p class="lead"><b>The Trusted Affiliate Marketing Platform that <span style="color:#ffc700"> Rewards</span> Your Effort!</b><br><br>Join today, refer friends, and earn amazing rewards with EZED MARKETING MALIEARN</p>
+            <div class="hero-btns">
+                <a href="#" class="btn btn-gold">&#128100+Register Now &rarr;</a>
+                <a href="#" class="btn btn-outline">&#9654; Watch Now</a>
+            </div>
         </div>
-        <div class="pto">
-            <img src="photo.jpg" width="450"">   </div>     
+        <div class="hero-img">
+            <div class="float-card f1">
+                Your Success <small>Our Priority!</small>
+            </div>
+            <img class="person" src="photo.jpg" alt="Ezed photo">
+            <div class="float-card f2">&bigstar; Trusted by Thousands</div>
+        </div>
+    </section>
+    <div class="trust" id="about">
+        <div class="trust-grid">
+            <div class="trust-item"><i>🛡️</i><div><b>Secure & Trusted</b> <span>Your Data is Safe</span></div></div>
+            <div class="trust-item"><i>⚡</i><div><b>Instant Rewards</b><span>Get Paid Fast</span></div></div>
+            <div class="trust-item"><i>👥</i><div><b>Referral Bonus</b><span>Earn KES 100 per Referral</span></div></div>
+            <div class="trust-item"><i>🎧</i><div><b>24/7 Support</b><span>We're Always Here</span></div></div>
+            <div class="trust-item"><i>🎁</i><div><b>Community Benefits</b><span>Be Part of Something Big</span></div></div>
+        </div>
     </div>
-    <section class="abt">
-        <div class="one">
-            <img src="trust.jpg" width="70px"><div class="two"><h2>Secure &Trusted</h2>
-            <p>Your Data Is Safe</p></div>
+    <div class="trust">
+        <div class="stats">
+            <div class="stat"><span style="font-size: 28px;">👥</span><div><b>50K</b> <span>Active Members</span></div></div>
+            <div class="stat"><span style="font-size: 28px;">🏆</span><div><b>KES 5M+</b> <span>Total Rewards Paid</span></div></div>
+            <div class="stat"><span style="font-size: 28px;">📊</span><div><b>100%</b> <span>Trusted Platform</span></div></div>
+            <div class="stat-cta"><b>Grow Your Network, Grow Your Income!</b><p>Strat Earning Today! Join EZED MARKETINGMALIEARN NOW</p></div>
         </div>
-        <div class="one">
-            <img src="flash.jpg" width="70px"><div class="two"><h2>Instant Rewards</h2>
-            <p>Get Paid Fast</p></div>
-        </div>
-        <div class="one">
-            <img src="team.jpg" width="70px"><div class="two">
-            <h2>Referral Bonus</h2>
-            <p>Earn KES 100 per Refarral</p></div>
-        </div>
-        <div class="one">
-            <img src="headphone.jpg" width="70px"><div class="two">
-            <h2>
-                24/7 Support
-            </h2>
-            <p>We're Always Here</p></div>
-        </div>
-        <div class="one">
-            <img src="gift.jpg" width="70px"><div class="two">
-            <h2>Community Benefit</h2>
-            <p>Be Part of Something Big</p></div>
-        </div>
-    </section>
-    <section class="more">
-        <div class="three">
-            <img src="team.jpg" width="70px"><div class="four">
-                <h2>50K+</h2>
-                <P>Active Members</P>
-            </div>
-        </div>
-        <div class="three">
-            <img src="troph.jpg" width="70px"><div class="four">
-                <h2>KES 3M+</h2>
-                <p>Total Rewards Paid</p>
-            </div>
-        </div>
-        <div class="three">
-            <img src="grow.jpg" width="70px">
-            <div class="four">
-                <h2>100%</h2>
-                <P>Trusted Platform</P>
-            </div>
-        </div>
-    </section>
-    <div class="bttm">
-    <h1>How It Works</h1>
-    <section class="hiw">
-        
-        <div class="five">
-           1 <img src="reg.jpg" width="70px">
-        <div class="six">
-            <h2>
-                Register
-            </h2>
-            <p>Create Your Account for free, activate your Accout with KES 100</p>
-        </div>
-        </div>
-        <div class="five">
-            <img src="share.jpg" width="70px"><div class="six">
-                <h2>Refer Friends</h2>
-                <p>Invite other to join and pay the registration fee.</p>
-            </div>
-        </div>
-        <div class="five">
-            <img src="coins.jpg" width="70px">
-            <div class="six">
-                <h2>Earn Rewards</h2>
-                <p>Get KES 100 for each verified referral.</p>
-            </div>
-        </div>
-    </section>
     </div>
+    <section class="section" id="hiw">
+        <h2>How It Works</h2>
+        <div class="how">
+            <div class="step"><div class="num">1</div><div><b>Register</b><span>Create your free account in minutes</span></div></div>
+            <div class="step"><div class="num">2</div><div><b>Refer Friends</b><span>Invite others to join and pay registration fee.</span></div></div>
+            <div class="cta-box"><b>Start Earning Today!</b><p style="font-size: 13px;">Join EZED MARKETING MALIEARN Now</p><br><a href="#" class="btn" style="background-color: #000; color:#fff">RegisterNow</a></div>
+        </div>
+    </section>
+    <footer>
+        <div class="foot">
+            <div>🛡️<b>100% Secure Payments Via M-Pesa</b> | 🤝 Fair & Transparent System  | ⭐ Trusted by Thousands</div>
+            <div><b style="color: #4caf50;">M-PESA</b> &#127472;&#127466; Kenya</div>
+        </div>
+    </footer>
 </body>
 </html>
